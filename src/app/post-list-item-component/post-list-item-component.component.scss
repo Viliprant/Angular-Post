@@ -1,0 +1,26 @@
+mat-card{
+    width: 90%;
+    margin: auto;
+}
+
+mat-card-content{
+    margin: 0 1rem;
+}
+
+.bg-success{
+    background-color: #4caf50;
+}
+
+.bg-error{
+    background-color: #f44336;
+}
+
+mat-card .dislike-button, mat-card .like-button{
+    background-color: white;
+}
+mat-card .like-button{
+    color: #009688;
+}
+mat-card .dislike-button{
+    color: #f44336;
+}
