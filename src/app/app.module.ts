@@ -11,12 +11,14 @@ import { MatListModule } from '@angular/material/list';
 
 import { PostListComponentComponent } from './post-list-component/post-list-component.component';
 import { PostListItemComponentComponent } from './post-list-item-component/post-list-item-component.component';
+import { BlogComponentComponent } from './blog-component/blog-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponentComponent,
-    PostListItemComponentComponent
+    PostListItemComponentComponent,
+    BlogComponentComponent
   ],
   imports: [
     BrowserModule,
