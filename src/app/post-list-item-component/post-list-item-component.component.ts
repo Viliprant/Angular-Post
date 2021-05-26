@@ -19,12 +19,12 @@ export class PostListItemComponentComponent implements OnInit {
 
   addToCounterLoveIts(){
     if(this.post){
-      this.post.loveIts += 1;
+      this.post.LoveIts += 1;
     }
   }
   removeToCounterLoveIts(){
     if(this.post){
-      this.post.loveIts -= 1;
+      this.post.LoveIts -= 1;
     }
   }
 }

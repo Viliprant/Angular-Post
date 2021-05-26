@@ -1,0 +1,4 @@
+<div *ngIf="deviceData">
+    <p class="title">{{deviceData.Name}}</p>
+    <p class="status" [ngClass]="{'in-stock': deviceData.Status, 'not-in-stock': !deviceData.Status}">{{deviceData.Status}}</p>
+</div>

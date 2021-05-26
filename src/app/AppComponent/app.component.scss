@@ -1,0 +1,26 @@
+nav{ 
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+nav > *{
+    padding: 1rem 2rem;
+}
+a{ 
+    text-decoration: none;
+    color: #B00B69;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+a:hover, a.active{ 
+    color: white;
+    background-color: #B00B69;
+}
+
+#content{
+    padding: 1rem 2rem;
+}

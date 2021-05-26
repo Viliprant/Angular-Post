@@ -8,24 +8,36 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 import { PostListComponentComponent } from './post-list-component/post-list-component.component';
 import { PostListItemComponentComponent } from './post-list-item-component/post-list-item-component.component';
 import { BlogComponentComponent } from './blog-component/blog-component.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponentComponent } from './home-component/home-component.component';
+import { AppareilViewComponentComponent } from './appareil-view-component/appareil-view-component.component';
+import { AppareilComponent } from './appareil/appareil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostListComponentComponent,
     PostListItemComponentComponent,
-    BlogComponentComponent
+    BlogComponentComponent,
+    HomeComponentComponent,
+    AppareilViewComponentComponent,
+    AppareilComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    AppRoutingModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

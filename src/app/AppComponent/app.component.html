@@ -1,1 +1,18 @@
-<app-blog-component></app-blog-component>
+<nav>
+  <a routerLink="/home" routerLinkActive="active">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    Home
+  </a>
+  <a routerLink="/blogs" routerLinkActive="active">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">auto_awesome</mat-icon>
+    Blogs
+  </a>
+  <a routerLink="/devices" routerLinkActive="active">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">computer</mat-icon>
+    Devices
+  </a>
+</nav>
+
+<div id="content">
+  <router-outlet></router-outlet>
+</div>

@@ -1,13 +1,13 @@
-<mat-card *ngIf="post" class="example-card" [ngClass]="{'bg-success': post.loveIts > 0, 'bg-error': post.loveIts < 0}">
+<mat-card *ngIf="post" class="example-card" [ngClass]="{'bg-success': post.LoveIts > 0, 'bg-error': post.LoveIts < 0}">
     <mat-card-header>
-      <mat-card-title>{{post.title}}</mat-card-title>
-      <mat-card-subtitle>{{post.createdAt | date : 'short'}}</mat-card-subtitle>
+      <mat-card-title>{{post.Title}}</mat-card-title>
+      <mat-card-subtitle>{{post.CreatedAt | date : 'short'}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <p>{{post.content}}</p>
+      <p>{{post.Content}}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button class="like-button"(click)="addToCounterLoveIts()">LIKE {{post.loveIts}}</button>
+      <button mat-button class="like-button"(click)="addToCounterLoveIts()">LIKE {{post.LoveIts}}</button>
       <button mat-button class="dislike-button" (click)="removeToCounterLoveIts()">Unlike</button>
     </mat-card-actions>
   </mat-card>

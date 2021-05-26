@@ -1,0 +1,28 @@
+div{ 
+    box-shadow: 0 1px 3px rgba(176,11,105,0.12), 0 1px 2px rgba(176,11,105,1);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+div > *{
+    padding: 1rem;
+    margin: 0;
+}
+div > .title{
+    font-size: 1.2rem;
+    color: #B00B69;
+    flex: 1;
+}
+div > .status{
+    height: 100%;
+    color: white;
+    display: block;
+}
+
+.status.in-stock{
+    background-color: #009688;
+}
+.status.not-in-stock{
+    background-color: #f44336;
+}
