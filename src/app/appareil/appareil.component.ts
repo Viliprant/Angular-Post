@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 // Models
-import { DeviceData } from '../../models/DeviceData';
+import { DeviceData } from '../models/DeviceData';
+import { DeviceService } from '../services/device-service.service';
 
 @Component({
   selector: 'app-appareil',
@@ -12,10 +13,29 @@ export class AppareilComponent implements OnInit {
 
   @Input() deviceData?: DeviceData;
 
-  constructor() { }
+  constructor(private _deviceService: DeviceService ) { }
 
   ngOnInit(): void {
     
+  }
+
+  getState(): string {
+    if(this.deviceData){
+      if(this.deviceData.Status){
+        return 'In Stock';
+      }
+      else{
+        return 'Not in Stock';
+      }
+    }
+    return '';
+  }
+
+  turnOn(name: string): void{
+    this._deviceService.turnOn(name);
+  }
+  turnOff(name: string): void{
+    this._deviceService.turnOff(name);
   }
 
 }

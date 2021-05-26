@@ -1,5 +1,6 @@
+import { DeviceService } from './../services/device-service.service';
 import { Component, OnInit } from '@angular/core';
-import { DeviceData } from 'src/models/DeviceData';
+import { DeviceData } from 'src/app/models/DeviceData';
 
 @Component({
   selector: 'app-appareil-view-component',
@@ -8,18 +9,22 @@ import { DeviceData } from 'src/models/DeviceData';
 })
 export class AppareilViewComponentComponent implements OnInit {
 
-  devicesList : DeviceData[] = [
-    new DeviceData("PC", false),
-    new DeviceData("Apple", true),
-    new DeviceData("Samsung", true),
-    new DeviceData("Huawei", false),
-    new DeviceData("Mac", true),
-    new DeviceData("HP", true),
-  ];
-
-  constructor() { }
+  devicesList: DeviceData[] = []; 
+  constructor(private _deviceService: DeviceService) { }
 
   ngOnInit(): void {
+    this._deviceService.getDevices()
+      .subscribe(devicesList => this.devicesList = devicesList);
+  }
+
+  turnOffAll(): void{
+    const isSure : boolean = window.confirm('Etes-vous sûr de vouloir tout éteindre ?');
+    if(isSure){
+      this._deviceService.turnOffAll();
+    }
+  }
+  turnOnAll(): void{
+    this._deviceService.turnOnAll();
   }
 
 }
