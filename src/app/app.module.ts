@@ -1,3 +1,4 @@
+import { IsAuthGuard } from './services/is-auth-guard.service';
 import { AuthService } from './services/auth-service.service';
 import { DeviceService } from './services/device-service.service';
 import { NgModule } from '@angular/core';
@@ -43,7 +44,7 @@ import { ErrorComponent } from './error/error.component';
     MatMenuModule,
     MatIconModule
   ],
-  providers: [DeviceService, AuthService],
+  providers: [DeviceService, AuthService, IsAuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

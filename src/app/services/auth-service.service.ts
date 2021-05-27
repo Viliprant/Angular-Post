@@ -7,13 +7,17 @@ import { Observable, of } from 'rxjs';
 })
 export class AuthService {
 
-  authData: AuthData = new AuthData();
+  private authData: AuthData = new AuthData();
 
   constructor() {
   }
 
   getAuth(): Observable<AuthData> {
     return of(this.authData);
+  }
+
+  isSignedIn(){
+    return this.authData.IsAuth;
   }
 
   signIn(): void{
