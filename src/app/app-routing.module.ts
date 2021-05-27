@@ -1,3 +1,4 @@
+import { IsAuthGuard } from './services/is-auth-guard.service';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -7,9 +8,9 @@ import { AppareilViewComponentComponent } from './appareil-view-component/appare
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
-  { path: 'blogs', component: BlogComponentComponent },
+  { path: 'blogs', component: BlogComponentComponent, canActivate: [IsAuthGuard] },
   { path: 'home', component: HomeComponentComponent },
-  { path: 'devices', component: AppareilViewComponentComponent },
+  { path: 'devices', component: AppareilViewComponentComponent, canActivate: [IsAuthGuard]},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: ErrorComponent },
 ];

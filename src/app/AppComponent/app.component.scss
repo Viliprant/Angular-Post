@@ -32,3 +32,23 @@ a:hover, a.active{
     flex-direction: column;
     flex: 1;
 }
+
+#auth-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#auth-wrapper .disconnect-button, .connect-button{
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    width: fit-content
+}
+#auth-wrapper .connect-button{
+    color: #009688;
+    border: 1px solid #009688;
+}
+#auth-wrapper .disconnect-button{
+    color: #f44336;
+    border: 1px solid #f44336;
+}

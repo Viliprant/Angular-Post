@@ -13,6 +13,12 @@
   </a>
 </nav>
 
+<div id="auth-wrapper">
+  <span>Is connected : {{authData.IsAuth}}</span>
+  <button *ngIf="!authData.IsAuth" mat-button class="connect-button"(click)="signIn()"> Connection </button>
+  <button *ngIf="authData.IsAuth" mat-button class="disconnect-button"(click)="signOut()"> Deconnect </button>
+</div>
+
 <div id="content">
   <router-outlet></router-outlet>
 </div>

@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth-service.service';
 import { DeviceService } from './services/device-service.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -42,7 +43,7 @@ import { ErrorComponent } from './error/error.component';
     MatMenuModule,
     MatIconModule
   ],
-  providers: [DeviceService],
+  providers: [DeviceService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
