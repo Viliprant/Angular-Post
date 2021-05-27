@@ -45,6 +45,9 @@ mat-card-actions .turn-on,
 mat-card-actions .turn-off{
     color: white;
 }
+button[disabled]{
+    background-color: #9e9e9e !important;
+}
 mat-card-actions .turn-on{
     background-color: #009688;
 }
