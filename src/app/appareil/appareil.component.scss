@@ -23,6 +23,8 @@ div > .status{
     display: grid;
     place-items: center;
     color: white;
+    font-size: 1.3em;
+    min-width: 100px;
 }
 
 .status.in-stock{

@@ -1,0 +1,29 @@
+:host{
+    display: grid;
+    place-items: center;
+    min-height: 100%;
+    flex: 1;
+}
+.wrapper{
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto auto;
+    width: fit-content;
+    gap: 1rem;
+}
+img{ 
+    width: 30vmin;
+    height: 30vmin;
+    border-radius: 50%;
+}
+h1{ 
+    display: grid;
+    gap: 0.5rem;
+    place-items: center;
+}
+mat-icon{ 
+    color: #f44336;
+    font-size: 5rem;
+    width: auto;
+    height: auto;
+}

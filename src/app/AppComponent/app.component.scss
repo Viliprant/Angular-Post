@@ -1,3 +1,8 @@
+:host{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
 nav{ 
     display: grid;
     width: 100%;
@@ -23,4 +28,7 @@ a:hover, a.active{
 
 #content{
     padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }

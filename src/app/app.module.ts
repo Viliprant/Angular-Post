@@ -18,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { AppareilViewComponentComponent } from './appareil-view-component/appareil-view-component.component';
 import { AppareilComponent } from './appareil/appareil.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AppareilComponent } from './appareil/appareil.component';
     BlogComponentComponent,
     HomeComponentComponent,
     AppareilViewComponentComponent,
-    AppareilComponent
+    AppareilComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

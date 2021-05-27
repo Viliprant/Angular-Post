@@ -1,5 +1,5 @@
 <mat-card-actions>
-    <button mat-button class="turn-on" (click)="turnOnAll()">Turn On</button>
-    <button mat-button class="turn-off" (click)="turnOffAll()">Turn Off</button>
+    <button mat-button class="turn-on" (click)="turnOnAll()">Turn On ALL</button>
+    <button mat-button class="turn-off" (click)="turnOffAll()">Turn Off ALL</button>
 </mat-card-actions>
 <app-appareil *ngFor="let dataDevice of devicesList" [deviceData]="dataDevice"></app-appareil>

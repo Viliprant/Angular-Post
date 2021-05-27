@@ -22,10 +22,10 @@ export class AppareilComponent implements OnInit {
   getState(): string {
     if(this.deviceData){
       if(this.deviceData.Status){
-        return 'In Stock';
+        return 'Allumé';
       }
       else{
-        return 'Not in Stock';
+        return 'Eteint';
       }
     }
     return '';
@@ -37,5 +37,4 @@ export class AppareilComponent implements OnInit {
   turnOff(name: string): void{
     this._deviceService.turnOff(name);
   }
-
 }
