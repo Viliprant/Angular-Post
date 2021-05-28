@@ -19,9 +19,9 @@ import { PostListItemComponentComponent } from './post-list-item-component/post-
 import { BlogComponentComponent } from './blog-component/blog-component.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponentComponent } from './home-component/home-component.component';
-import { AppareilViewComponentComponent } from './appareil-view-component/appareil-view-component.component';
-import { AppareilComponent } from './appareil/appareil.component';
 import { ErrorComponent } from './error/error.component';
+import { OneAppareilViewComponent } from './one-appareil-view/one-appareil-view.component';
+import { AppareilModule } from './appareil-view-component/appareil.module';
 
 @NgModule({
   declarations: [
@@ -30,9 +30,8 @@ import { ErrorComponent } from './error/error.component';
     PostListItemComponentComponent,
     BlogComponentComponent,
     HomeComponentComponent,
-    AppareilViewComponentComponent,
-    AppareilComponent,
-    ErrorComponent
+    ErrorComponent,
+    OneAppareilViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +41,9 @@ import { ErrorComponent } from './error/error.component';
     MatListModule,
     AppRoutingModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    //CUSTOM MODULE
+    AppareilModule,
   ],
   providers: [DeviceService, AuthService, IsAuthGuard],
   bootstrap: [AppComponent]

@@ -25,6 +25,16 @@ export class DeviceService{
   getDevices(): Observable<DeviceData[]> {
     return of(this.devicesList);
   }
+
+  getOneDevice(name : string): DeviceData {
+    let device: DeviceData = new DeviceData('', false);
+    if(this._authService.isSignedIn())
+    {
+      device = this.devicesList.filter((device: DeviceData) => device.Name == name)[0] || device;
+    }
+    return device
+  }
+
   turnOn(name : string): void{
     if(this._authService.isSignedIn())
     {

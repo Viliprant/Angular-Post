@@ -1,0 +1,4 @@
+<div class="wrapper">
+    <h1 [ngClass]="{'success': deviceData.Status, 'warning': !deviceData.Status}">{{deviceData.Name}}</h1>
+    <span>{{deviceData.Status}}</span>
+</div>
