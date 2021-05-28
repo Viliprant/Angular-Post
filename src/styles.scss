@@ -8,3 +8,14 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.toast-success, .toast-warning{
+    color: white;
+}
+.toast-success{
+    background-color: var(--success-color);
+}
+.toast-alert{
+    background-color: var(--warning-color);
+    color: white;
+}
