@@ -1,6 +1,6 @@
 import { AuthData } from './../models/AuthData';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +8,13 @@ import { Observable, of } from 'rxjs';
 export class AuthService {
 
   private authData: AuthData = new AuthData();
+  private authDataSubject: Subject<AuthData> = new Subject();
 
   constructor() {
   }
 
-  getAuth(): Observable<AuthData> {
-    return of(this.authData);
+  getAuth(): Subject<AuthData> {
+    return this.authDataSubject;
   }
 
   isSignedIn(){
@@ -22,8 +23,10 @@ export class AuthService {
 
   signIn(): void{
     this.authData.IsAuth = true;
+    this.authDataSubject.next(this.authData);
   }
   signOut(): void{
     this.authData.IsAuth = false;
+    this.authDataSubject.next(this.authData);
   }
 }
